@@ -7,7 +7,7 @@ ps -ef | more
 ps -u root or danila_centos
 4. Программа с бесконечным циклом 
 echo "while [ 1 ]; do echo 1 > testfile; sleep 2s; done" > testprocess.sh
-sh testproc.sh &
+sh testprocess.sh &
 5. Выполните п. 1. Объясните изменения в листинге характеристик процессов.
 ps -ef | grep testprocess
 6. Понизьте значение приоритета процедуры: 
