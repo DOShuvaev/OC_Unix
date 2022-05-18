@@ -6,7 +6,7 @@ ps -ef | more
 3. Вывод листинга конкретного пользователя: 
 ps -u root or danila_centos
 4. Программа с бесконечным циклом 
-echo "while [ 1 ]; do echo 1 > testfile; sleep 1s; done" > testprocess.sh
+echo "while [ 1 ]; do echo 1 > testfile; sleep 2s; done" > testprocess.sh
 sh testproc.sh &
 5. Выполните п. 1. Объясните изменения в листинге характеристик процессов.
 ps -ef | grep testprocess
