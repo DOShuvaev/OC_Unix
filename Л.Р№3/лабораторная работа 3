@@ -37,3 +37,18 @@ chmod a-x ~/labs/ls
 11. Установка в umask на 077 при запуске: 
 echo umask 077 > ~/.bashrc
 
+Задание №2
+1. Создание поддиректории shared в домашней директории:
+mkdir ~/shared
+2. Создание нового файла doc1.txt и выдать права на чтение "соседу":
+echo > doc1.txt
+getfacl ~/shared/doc1.txt
+setfacl -m u:b16v7412:r ~/shared/doc1.txt
+3. проверить доступ к файлу: 
+cat ~danila_centos/shared/doc1.txt
+4. Создание общей директории: 
+setfacl -m u:danila_centos:rw ~/shared
+5. Перезапись файла текста в файл:
+echo "This text is created by user1" > ~/shared/file1.txt
+echo "This text is created by user2" > ~/shared/file1.txt
+cat ~/shared/file1.txt
